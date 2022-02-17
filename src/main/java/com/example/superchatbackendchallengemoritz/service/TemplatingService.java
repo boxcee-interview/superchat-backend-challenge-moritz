@@ -42,7 +42,6 @@ public class TemplatingService {
         }
     }
 
-    @SuppressWarnings("unchecked")
     private Double getBitcoinExchangeRate() throws IOException {
         OkHttpClient client = new OkHttpClient();
 

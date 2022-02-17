@@ -50,7 +50,7 @@ class ConversationApiTest extends BaseMvcTest {
         senderEntity.setEmail(UUID.randomUUID().toString());
         senderEntity.setPhoneNumber(UUID.randomUUID().toString());
         senderEntity = contactRepository.save(senderEntity);
-        String content = "Hello World! {{recipient}}";
+        String content = "Hello World! {{recipient}} 1.2 BTC";
         com.example.superchatbackendchallengemoritz.persistence.model.Message messageEntity =
                 new com.example.superchatbackendchallengemoritz.persistence.model.Message();
         messageEntity.setRecipient(recipientEntity);
@@ -89,11 +89,14 @@ class ConversationApiTest extends BaseMvcTest {
         List<Message> messages = conversation.getMessages();
         Assertions.assertEquals(1, messages.size());
         Message message = messages.get(0);
-        Assertions.assertEquals(
-                String.format(
-                        "Hello World! %s %s",
-                        recipientEntity.getFirstName(), recipientEntity.getLastName()),
-                message.getContent());
+        Assertions.assertTrue(
+                message.getContent()
+                        .contains(
+                                String.format(
+                                        "Hello World! %s %s",
+                                        recipientEntity.getFirstName(),
+                                        recipientEntity.getLastName())));
+        Assertions.assertTrue(message.getContent().contains("USD"));
     }
 
     @Test
