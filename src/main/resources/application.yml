@@ -1,3 +1,12 @@
 app:
   name: superchat-backend-challenge-moritz
   version: 0.1.0
+
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/postgres
+    username: postgres
+    password: sergtsop
+  jpa:
+    hibernate:
+      ddl-auto: update
