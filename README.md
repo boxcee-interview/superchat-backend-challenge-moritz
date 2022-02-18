@@ -46,7 +46,9 @@ Response:
 {
   "recipientId": "string",
   "senderId": "string",
-  "messages": []
+  "messages": [
+    "Message"
+  ]
 }
 ```
 
@@ -93,6 +95,20 @@ Request:
   "lastName": "string",
   "email": "string",
   "phoneNumber": "string"
+}
+```
+
+### incomingWebhook
+
+POST `/api/v1/webhooks`
+
+Request:
+
+```json
+{
+  "recipient": "Contact",
+  "sender": "Contact",
+  "message": "string"
 }
 ```
 
