@@ -1,8 +1,30 @@
 # Superchat Backend Challenge Moritz
 
 ## Table Of Contents
-1. [Run](##Substitution)
-2. [Api](##Api)
+
+1. [Tasks](#Tasks)
+2. [Run](#Run)
+3. [API](#API)
+4. [Substitution](#Substitution)
+
+## Tasks
+
+### API Service
+
+Your service should allow potential users to use these functionalities:
+
+1. Create contacts given their personal information (Name, E-Mail, etc)
+2. List all contacts
+3. Send a message to a contact
+4. List all previous conversations
+5. Receive messages from an external service via a webhook
+
+### Additional:
+
+Please support at least substituting the following:
+
+1. Name of contact
+2. Current Bitcoin Price in $
 
 ## Run
 
@@ -10,7 +32,7 @@
 ./gradlew spotlessApply build && docker-compose up --build
 ```
 
-## Api
+## API
 
 ### getConversations
 
