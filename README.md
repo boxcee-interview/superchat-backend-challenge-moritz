@@ -1,5 +1,7 @@
 # Superchat Backend Challenge Moritz
 
+--> [Main GitHub Profile](https://github.com/boxcee) <--
+
 ## Table Of Contents
 
 1. [Tasks](#Tasks)
@@ -95,6 +97,9 @@ Request:
 ```
 
 ## Substitution
+
+When creating a new message, the content may be filled with placeholders. The placeholders will be replaced when the
+message is read.
 
 | Placeholder   | Replacement                                  |
 |---------------|----------------------------------------------|
